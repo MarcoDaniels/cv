@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "build/ssr",
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "lib": ["es6", "esnext", "dom"],
+    "target": "es6"
+  }
+}
