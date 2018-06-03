@@ -1,12 +1,10 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import App from './App'
-import './Styles/App.css'
-import './Styles/index.css'
-import registerServiceWorker from './registerServiceWorker'
+import './Styles/normalize.css'
+import './Styles/skeleton.css'
+import './Styles/main.css'
 
-ReactDOM.render(
-    <App/>,
-    document.getElementById('root') as HTMLElement
-)
-registerServiceWorker()
+const WrappedApp = (<App/>)
+
+render(WrappedApp, document.getElementById('root'))
