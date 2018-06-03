@@ -12,21 +12,31 @@
     "build:client": "react-scripts-ts build",
     "build:server": "rm -rf build/ssr && tsc --pretty -p tsconfig.server.json",
     "build": "yarn build:client && yarn build:server",
-    "serve": "sudo firebase serve --only functions,hosting -p 3001",
+    "serve": "yarn build && sudo firebase serve --only functions,hosting -p 3001",
     "deploy": "yarn build && firebase deploy --only functions,hosting"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.2.2",
+    "apollo-client": "^2.3.2",
+    "apollo-link-http": "^1.5.4",
+    "cross-fetch": "^2.2.1",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "firebase-admin": "^5.12.1",
     "firebase-functions": "^1.0.3",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
     "react": "^16.4.0",
+    "react-apollo": "^2.1.4",
     "react-dom": "^16.4.0",
     "react-scripts-ts": "2.16.0"
   },
   "devDependencies": {
     "@types/express": "^4.11.1",
+    "@types/graphql": "^0.13.1",
     "@types/jest": "^23.0.0",
-    "@types/node": "^10.3.0",
+    "@types/node": "^9.6.0",
+    "@types/prop-types": "^15.5.3",
     "@types/react": "^16.3.16",
     "@types/react-dom": "^16.0.5",
     "typescript": "^2.9.1"
