@@ -10,3 +10,13 @@ export const loadApp = gql`
         }
     }
 `
+
+export const loadDescription = gql`
+    query getDescription {
+        user {
+            get(userName: "marcodaniels") {
+                description
+            }
+        }
+    }
+`

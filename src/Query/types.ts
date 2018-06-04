@@ -15,3 +15,16 @@ export interface loadAppQuery {
     } | null,
   } | null,
 };
+
+export interface getDescriptionQuery {
+  // The user query
+  user:  {
+    __typename: "UserQuery",
+    // This is user.
+    get:  {
+      __typename: "User",
+      // The user description.
+      description: Array< string | null > | null,
+    } | null,
+  } | null,
+};
