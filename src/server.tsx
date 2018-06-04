@@ -33,7 +33,6 @@ staticFiles.forEach(file => {
 })
 
 server.get('**', (req, res) => {
-    // i know...
     const fetching: any = fetch
 
     const httpLink = createHttpLink({
@@ -54,15 +53,16 @@ server.get('**', (req, res) => {
     )
 
     const renderer = renderToStringWithData(WrappedApp)
-    renderer.then(content => {
-        const finalHtml = index.replace('{{SSR}}', content)
+    renderer.then(serverSideContent => {
+        const serverSideState = `<script>window.__APOLLO_STATE__=${JSON.stringify(client.extract())};</script>`
+        const content = serverSideContent + serverSideState
+        const html = index.replace('{{SSR}}', content)
         res.status(200)
         res.set('Cache-Control', 'public, max-age=600, s-maxage=1200')
-        res.send(finalHtml)
+        res.send(html)
         res.end()
     }).catch(error => {
-        console.log('Error: ', error)
-        console.log('api: ', process.env.REACT_APP_GRAPH_QL_API)
+        console.log('renderer error: ', error)
         res.status(500)
         res.send({
             success: false,

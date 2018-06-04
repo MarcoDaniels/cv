@@ -14,10 +14,18 @@ const httpLink = createHttpLink({
     uri: process.env.REACT_APP_GRAPH_QL_API,
 })
 
+declare global {
+    interface Window {
+        __APOLLO_STATE__: any;
+    }
+}
+
+window.__APOLLO_STATE__ = window.__APOLLO_STATE__ || {}
+
 const client = new ApolloClient({
     link: httpLink,
-    cache: new InMemoryCache(),
-    ssrForceFetchDelay: 100
+    ssrForceFetchDelay: 100,
+    cache: new InMemoryCache().restore(window.__APOLLO_STATE__),
 })
 
 const WrappedApp = (
