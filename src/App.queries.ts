@@ -6,16 +6,19 @@ export const loadApp = gql`
             get(userName: "marcodaniels") {
                 name
                 welcomeMessage
+                description
             }
         }
     }
 `
 
-export const loadDescription = gql`
-    query getDescription {
+export const loadSkills = gql`
+    query getSkills {
         user {
             get(userName: "marcodaniels") {
-                description
+                skills {
+                    name
+                }
             }
         }
     }

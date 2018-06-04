@@ -20,7 +20,7 @@ const App: React.SFC = () => {
                 return (
                     <div>
                         <Header name={user.name} welcomeMessage={welcomeMessage}/>
-                        <Content/>
+                        <Content description={user.description}/>
                         <Footer name={user.name}/>
                     </div>
                 )

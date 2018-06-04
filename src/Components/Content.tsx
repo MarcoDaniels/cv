@@ -2,13 +2,13 @@ import * as React from 'react'
 import BasicInfo from './BasicInfo'
 import SocialMedia from './SocialMedia'
 import Skills from './Skills'
-import Description from './Description'
+import Description, { DescriptionProps } from './Description'
 import Experience from './Experience'
 import Education from './Education'
 import Projects from './Projects'
 
-const Content: React.SFC = props => {
-
+const Content: React.SFC<DescriptionProps> = props => {
+    const {description} = props
     return (
         <div className="container">
             <div className="row">
@@ -19,7 +19,7 @@ const Content: React.SFC = props => {
                 </div>
                 <div className="eight columns" style={{background: 'LightGray'}}>
                     <Skills/>
-                    <Description/>
+                    <Description description={description}/>
                     <Experience/>
                     <Projects/>
                     <Education/>
