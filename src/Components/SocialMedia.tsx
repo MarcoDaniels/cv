@@ -11,7 +11,7 @@ const SocialMedia: React.SFC<SocialMediaProps> = props => {
     return (
         <div>
             {socialMedia && socialMedia.map((media, i) => media && (
-                <p>{media.name}</p>
+                <p key={i}>{media.name}</p>
             ))}
         </div>
     )

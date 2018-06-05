@@ -14,6 +14,12 @@ export interface loadAppQuery {
       welcomeMessage: Array< string | null > | null,
       // The user description.
       description: Array< string | null > | null,
+      // Image type
+      image:  {
+        __typename: "Images",
+        // The image url
+        url: string | null,
+      } | null,
       // Social Media accounts.
       socialMedia:  Array< {
         __typename: "SocialMedia",
@@ -134,6 +140,12 @@ export interface userInfoFragment {
   __typename: "User",
   // The user name.
   name: string | null,
+  // Image type
+  image:  {
+    __typename: "Images",
+    // The image url
+    url: string | null,
+  } | null,
 };
 
 export interface socialMediaFragment {

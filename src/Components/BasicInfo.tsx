@@ -6,11 +6,11 @@ export type BasicInfoProps = {
 }
 
 const BasicInfo: React.SFC<BasicInfoProps> = props => {
-    const {name} = props.user
+    const {name, image} = props.user
 
     return (
         <div>
-            <p>picture</p>
+            <img className="u-max-full-width" src={image && image.url ? image.url : ''}/>
             <p>{name}</p>
             <p>location</p>
         </div>

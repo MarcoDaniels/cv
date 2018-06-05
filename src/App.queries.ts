@@ -9,6 +9,9 @@ const description = gql`
 const userInfo = gql`
     fragment userInfo on User {
         name
+        image {
+            url
+        }
     }
 `
 

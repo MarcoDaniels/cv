@@ -20,7 +20,7 @@ const Content: React.SFC<ContentProps> = props => {
     return (
         <div className="container content">
             <div className="row">
-                <div className="four columns" style={{border: '1px solid black', textAlign: 'center'}}>
+                <div className="four columns">
                     <BasicInfo user={info}/>
                     <hr/>
                     <SocialMedia user={socialMedia}/>
