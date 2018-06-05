@@ -14,6 +14,18 @@ export interface loadAppQuery {
       welcomeMessage: Array< string | null > | null,
       // The user description.
       description: Array< string | null > | null,
+      // Social Media accounts.
+      socialMedia:  Array< {
+        __typename: "SocialMedia",
+        // The name of the social media.
+        name: string | null,
+        // The social media string identifier(ex: facebook, instagram).
+        identifier: string | null,
+        // The url for the social media.
+        url: string | null,
+        // The display name for the social media URL.
+        displayName: string | null,
+      } | null > | null,
     } | null,
   } | null,
 };
@@ -110,4 +122,32 @@ export interface getEducationQuery {
       } | null > | null,
     } | null,
   } | null,
+};
+
+export interface descriptionFragment {
+  __typename: "User",
+  // The user description.
+  description: Array< string | null > | null,
+};
+
+export interface userInfoFragment {
+  __typename: "User",
+  // The user name.
+  name: string | null,
+};
+
+export interface socialMediaFragment {
+  __typename: "User",
+  // Social Media accounts.
+  socialMedia:  Array< {
+    __typename: "SocialMedia",
+    // The name of the social media.
+    name: string | null,
+    // The social media string identifier(ex: facebook, instagram).
+    identifier: string | null,
+    // The url for the social media.
+    url: string | null,
+    // The display name for the social media URL.
+    displayName: string | null,
+  } | null > | null,
 };

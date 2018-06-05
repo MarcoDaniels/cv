@@ -58,6 +58,7 @@ a:visited {
     padding: 0 20px;
 }
 .section {
+    min-height: 200px;
     margin-top: 25px;
 }
 .info {

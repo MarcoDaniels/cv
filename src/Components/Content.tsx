@@ -2,20 +2,28 @@ import * as React from 'react'
 import BasicInfo from './BasicInfo'
 import SocialMedia from './SocialMedia'
 import Skills from './Skills'
-import Description, { DescriptionProps } from './Description'
+import Description from './Description'
 import Experience from './Experience'
 import Education from './Education'
 import Projects from './Projects'
+import { descriptionFragment, socialMediaFragment, userInfoFragment } from '../Query/types'
 
-const Content: React.SFC<DescriptionProps> = props => {
-    const {description} = props
+export type ContentProps = {
+    description: descriptionFragment
+    info: userInfoFragment
+    socialMedia: socialMediaFragment
+}
+
+const Content: React.SFC<ContentProps> = props => {
+    const {description, info, socialMedia} = props
+
     return (
         <div className="container content">
             <div className="row">
                 <div className="four columns" style={{border: '1px solid black', textAlign: 'center'}}>
-                    <BasicInfo/>
+                    <BasicInfo user={info}/>
                     <hr/>
-                    <SocialMedia/>
+                    <SocialMedia user={socialMedia}/>
                 </div>
                 <div className="eight columns">
                     <Skills/>

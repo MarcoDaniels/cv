@@ -1,12 +1,18 @@
 import * as React from 'react'
+import { socialMediaFragment } from '../Query/types'
 
-const SocialMedia: React.SFC = props => {
+export type SocialMediaProps = {
+    user: socialMediaFragment
+}
+
+const SocialMedia: React.SFC<SocialMediaProps> = props => {
+    const {socialMedia} = props.user
 
     return (
         <div>
-            <p>social media 1</p>
-            <p>social media 2</p>
-            <p>social media 3</p>
+            {socialMedia && socialMedia.map((media, i) => media && (
+                <p>{media.name}</p>
+            ))}
         </div>
     )
 }

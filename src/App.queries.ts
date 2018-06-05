@@ -1,15 +1,43 @@
 import gql from 'graphql-tag'
 
+const description = gql`
+    fragment description on User {
+        description
+    }
+`
+
+const userInfo = gql`
+    fragment userInfo on User {
+        name
+    }
+`
+
+const socialMedia = gql`
+    fragment socialMedia on User {
+        socialMedia {
+            name
+            identifier
+            url
+            displayName
+        }
+    }
+`
+
 export const loadApp = gql`
     query loadApp {
         user {
             get(userName: "marcodaniels") {
                 name
                 welcomeMessage
-                description
+                ...description
+                ...userInfo
+                ...socialMedia
             }
         }
     }
+    ${description}
+    ${userInfo}
+    ${socialMedia}
 `
 
 export const loadSkills = gql`
