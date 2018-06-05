@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { getSkillsQuery } from '../Query/types'
 import { Query } from 'react-apollo'
+import { getSkillsQuery } from '../Query/types'
 import { loadSkills } from '../App.queries'
 
 class GetSkills extends Query<getSkillsQuery> {}
@@ -14,8 +14,8 @@ const Skills: React.SFC = () => {
 
                 if (loading) {
                     return (
-                        <div style={{textAlign: 'center'}}>
-                            Loading ...
+                        <div className="skills">
+                            <span className="loading">&nbsp;</span>
                         </div>
                     )
                 }
@@ -23,9 +23,9 @@ const Skills: React.SFC = () => {
                 if (!data.user || !data.user.get) { return null }
                 const user = data.user.get
                 return (
-                    <div style={{textAlign: 'center'}}>
+                    <div className="skills">
                         {user.skills && user.skills.map((item, i) => item && (
-                            <span key={i}>{item.name} </span>
+                            <span className="skill-name loaded" key={i}>{item.name}</span>
                         ))}
                     </div>
                 )

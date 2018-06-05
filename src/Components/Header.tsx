@@ -13,7 +13,7 @@ const Header: React.SFC<HeaderProps> = props => {
                 <div className="five columns">
                     <h1>{name}</h1>
                 </div>
-                <div className="seven columns welcome">
+                <div className="seven columns header-welcome">
                     {welcomeMessage}
                 </div>
             </div>

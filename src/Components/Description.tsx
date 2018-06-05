@@ -7,9 +7,9 @@ export type DescriptionProps = {
 const Description: React.SFC<DescriptionProps> = props => {
     const {description} = props
     return (
-        <div>
+        <div className="section description">
             {description && description.map((item, i) => item && (
-                <div key={i}>{item}</div>
+                <p key={i}>{item}</p>
             ))}
         </div>
     )
