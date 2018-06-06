@@ -3,6 +3,9 @@ import { Query } from 'react-apollo'
 import { getProjectsQuery } from '../Query/types'
 import { loadProjects } from '../App.queries'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as calendar from '@fortawesome/fontawesome-free-regular/faCalendarCheck'
+
 class GetProjects extends Query<getProjectsQuery> {}
 
 const Projects: React.SFC = () => {
@@ -31,7 +34,7 @@ const Projects: React.SFC = () => {
                                         {project.name}
                                     </a>
                                 </h3>
-                                <div className="info">{project.releaseDate}</div>
+                                <div className="info"><FontAwesomeIcon icon={calendar}/> {project.releaseDate}</div>
                                 <div className="info-details">
                                 {project.details && project.details.map((detail, d) => detail && (
                                     <div key={d}>{detail}</div>

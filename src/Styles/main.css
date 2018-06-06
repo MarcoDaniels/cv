@@ -17,8 +17,8 @@ h2 {
     margin-bottom: 5px;
 }
 h3 {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 17px;
+    font-weight: 600;
     letter-spacing: 0;
     margin-bottom: 1px;
 }
@@ -82,6 +82,15 @@ hr {
 }
 .info-header {
     margin-top: 15px;
+}
+.info-icon {
+    width: 25px;
+    display: inline-block;
+    text-align: center;
+}
+.info-text {
+    width: 100%;
+    font-size: 12px;
 }
 .info-details {
     padding: 10px 10px;
