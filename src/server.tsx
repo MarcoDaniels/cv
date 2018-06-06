@@ -58,7 +58,7 @@ server.get('**', (req, res) => {
         const content = serverSideContent + serverSideState
         const html = index.replace('{{SSR}}', content)
         res.status(200)
-        res.set('Cache-Control', 'public, max-age=600, s-maxage=1200')
+        res.set('Cache-Control', 'public, max-age=800, s-maxage=1200')
         res.send(html)
         res.end()
     }).catch(error => {
