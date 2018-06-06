@@ -15,7 +15,6 @@ const Education: React.SFC = () => {
                 if (loading) {
                     return (
                         <div className="section">
-                            <h2>Education</h2>
                             <span className="loading">&nbsp;</span>
                         </div>
                     )

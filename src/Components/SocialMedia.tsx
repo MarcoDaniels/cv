@@ -9,9 +9,13 @@ const SocialMedia: React.SFC<SocialMediaProps> = props => {
     const {socialMedia} = props.user
 
     return (
-        <div>
+        <div className="info">
             {socialMedia && socialMedia.map((media, i) => media && (
-                <p key={i}>{media.name}</p>
+                <div key={i}>
+                    <a href={media.url ? media.url : ''} target="_blank">
+                        /{media.displayName}
+                    </a>
+                </div>
             ))}
         </div>
     )

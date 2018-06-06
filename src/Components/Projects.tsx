@@ -14,8 +14,7 @@ const Projects: React.SFC = () => {
 
                 if (loading) {
                     return (
-                        <div className="section">
-                            <h2>Projects</h2>
+                        <div className="section section-big">
                             <span className="loading">&nbsp;</span>
                         </div>
                     )

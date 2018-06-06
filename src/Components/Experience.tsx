@@ -14,8 +14,7 @@ const Experience: React.SFC = () => {
 
                 if (loading) {
                     return (
-                        <div className="section">
-                            <h2>Experience</h2>
+                        <div className="section section-big">
                             <span className="loading">&nbsp;</span>
                         </div>
                     )

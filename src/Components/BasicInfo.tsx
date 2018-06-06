@@ -11,8 +11,10 @@ const BasicInfo: React.SFC<BasicInfoProps> = props => {
     return (
         <div>
             <img className="u-max-full-width" src={image && image.url ? image.url : ''}/>
-            <p>{name}</p>
-            <p>location</p>
+            <div className="info">
+                <div>{name}</div>
+                <div>Odense, Denmark</div>
+            </div>
         </div>
     )
 }

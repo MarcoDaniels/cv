@@ -30,6 +30,17 @@ a,
 a:link,
 a:visited {
     text-decoration: none;
+    color: #6da0f2;
+}
+hr {
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid lightgray;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
 }
 .container {
     max-width: 1140px;
@@ -49,7 +60,7 @@ a:visited {
 .skills {
     text-align: center;
     padding: 10px 0;
-    background-color: #f2f2f2;
+    background-color: #fafafa;
 }
 .skill-name {
     padding: 0 3px;
@@ -58,8 +69,11 @@ a:visited {
     padding: 0 20px;
 }
 .section {
-    min-height: 200px;
+    min-height: 150px;
     margin-top: 25px;
+}
+.section-big {
+    min-height: 300px;
 }
 .info {
     display: block;
@@ -71,11 +85,10 @@ a:visited {
 }
 .info-details {
     padding: 10px 10px;
-    background-color: #f2f2f2;
+    background-color: #fafafa;
 }
 .footer {
     margin-top: 40px;
-    text-align: right;
     border-top: 1px solid;
 }
 
