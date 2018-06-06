@@ -7,7 +7,7 @@
   "private": true,
   "main": "build/ssr/server.js",
   "scripts": {
-    "start": "PORT=3006 react-scripts-ts start",
+    "start": "react-scripts-ts start",
     "test": "react-scripts-ts test --env=jsdom",
     "build:client": "react-scripts-ts build",
     "build:server": "rm -rf build/ssr && tsc --pretty -p tsconfig.server.json",
