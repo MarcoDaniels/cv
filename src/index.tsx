@@ -8,6 +8,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import App from './App'
 import './Styles/normalize.css'
 import './Styles/skeleton.css'
+import './Styles/styles.css'
 import './Styles/main.css'
 
 const httpLink = createHttpLink({

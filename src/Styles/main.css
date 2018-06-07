@@ -73,7 +73,9 @@ hr {
     margin-top: 25px;
 }
 .section-big {
-    min-height: 300px;
+    min-height: 800px;
+    text-align: center;
+    margin-top: 50px;
 }
 .info {
     display: block;

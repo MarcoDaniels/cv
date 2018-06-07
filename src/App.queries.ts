@@ -26,6 +26,14 @@ const socialMedia = gql`
     }
 `
 
+const skills = gql`
+    fragment skills on User {
+        skills {
+            name
+        }
+    }
+`
+
 export const loadApp = gql`
     query loadApp {
         user {
@@ -35,71 +43,64 @@ export const loadApp = gql`
                 ...description
                 ...userInfo
                 ...socialMedia
+                ...skills
             }
         }
     }
     ${description}
     ${userInfo}
     ${socialMedia}
+    ${skills}
 `
 
-export const loadSkills = gql`
-    query getSkills {
-        user {
-            get(userName: "marcodaniels") {
-                skills {
-                    name
-                }
-            }
+const experience = gql`
+    fragment experience on User {
+        experience {
+            position
+            workplace
+            from
+            to
+            location
+            details
         }
     }
 `
 
-export const loadExperience = gql`
-    query getExperience {
-        user {
-            get(userName: "marcodaniels") {
-                experience {
-                    position
-                    workplace
-                    from
-                    to
-                    location
-                    details
-                }
-            }
+const education = gql`
+    fragment education on User {
+        education {
+            degree
+            institution
+            from
+            to
+            location
+            details
         }
     }
 `
 
-export const loadProjects = gql`
-    query getProjects {
-        user {
-            get(userName: "marcodaniels") {
-                projects {
-                    name
-                    homepage
-                    releaseDate
-                    details
-                }
-            }
+const projects = gql`
+    fragment projects on User {
+        projects {
+            name
+            homepage
+            releaseDate
+            details
         }
     }
 `
 
-export const loadEducation = gql`
-    query getEducation {
+export const loadData = gql`
+    query loadData {
         user {
             get(userName: "marcodaniels") {
-                education {
-                    degree
-                    institution
-                    from
-                    to
-                    location
-                    details
-                }
+                ...experience
+                ...education
+                ...projects
             }
         }
     }
+    ${experience}
+    ${education}
+    ${projects}
 `

@@ -3,19 +3,18 @@ import BasicInfo from './BasicInfo'
 import SocialMedia from './SocialMedia'
 import Skills from './Skills'
 import Description from './Description'
-import Experience from './Experience'
-import Education from './Education'
-import Projects from './Projects'
-import { descriptionFragment, socialMediaFragment, userInfoFragment } from '../Query/types'
+import { descriptionFragment, skillsFragment, socialMediaFragment, userInfoFragment } from '../Query/types'
+import Data from './Data'
 
 export type ContentProps = {
     description: descriptionFragment
     info: userInfoFragment
     socialMedia: socialMediaFragment
+    skills: skillsFragment
 }
 
 const Content: React.SFC<ContentProps> = props => {
-    const {description, info, socialMedia} = props
+    const {description, info, socialMedia, skills} = props
 
     return (
         <div className="container content">
@@ -26,11 +25,9 @@ const Content: React.SFC<ContentProps> = props => {
                     <SocialMedia user={socialMedia}/>
                 </div>
                 <div className="eight columns">
-                    <Skills/>
+                    <Skills user={skills}/>
                     <Description description={description}/>
-                    <Experience/>
-                    <Education/>
-                    <Projects/>
+                    <Data/>
                 </div>
             </div>
         </div>
