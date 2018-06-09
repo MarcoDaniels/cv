@@ -14,12 +14,8 @@ export interface loadAppQuery {
       welcomeMessage: Array< string | null > | null,
       // The user description.
       description: Array< string | null > | null,
-      // Image type
-      image:  {
-        __typename: "Images",
-        // The image url
-        url: string | null,
-      } | null,
+      // The user image url.
+      image: string | null,
       // Social Media accounts.
       socialMedia:  Array< {
         __typename: "SocialMedia",
@@ -32,7 +28,7 @@ export interface loadAppQuery {
         // The display name for the social media URL.
         displayName: string | null,
       } | null > | null,
-      // Technical and programming skills and language.
+      // Technical skills, programming skills and languages.
       skills:  Array< {
         __typename: "Skills",
         // The skill name.
@@ -107,12 +103,8 @@ export interface userInfoFragment {
   __typename: "User",
   // The user name.
   name: string | null,
-  // Image type
-  image:  {
-    __typename: "Images",
-    // The image url
-    url: string | null,
-  } | null,
+  // The user image url.
+  image: string | null,
 };
 
 export interface socialMediaFragment {
@@ -133,7 +125,7 @@ export interface socialMediaFragment {
 
 export interface skillsFragment {
   __typename: "User",
-  // Technical and programming skills and language.
+  // Technical skills, programming skills and languages.
   skills:  Array< {
     __typename: "Skills",
     // The skill name.
