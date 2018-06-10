@@ -10,9 +10,11 @@ const Skills: React.SFC<SkillsProps> = props => {
 
     return (
         <div className="skills">
+            <div className="loaded">
             {skills && skills.map((item, i) => item && (
-                <span className="skill-name loaded" key={i}>{item.name}</span>
+                <span className="skill-name" key={i}>{item.name}</span>
             ))}
+            </div>
         </div>
     )
 }

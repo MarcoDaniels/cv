@@ -16,7 +16,7 @@ const SocialMedia: React.SFC<SocialMediaProps> = props => {
     const {socialMedia} = props.user
 
     return (
-        <div className="info">
+        <div className="info info-social">
             {socialMedia && socialMedia.map((media, i) => media && (
                 <div key={i}>
                     <span className="info-icon">

@@ -64,6 +64,7 @@ hr {
 }
 .skill-name {
     padding: 0 3px;
+    display: inline-block;
 }
 .description {
     padding: 0 20px;
@@ -97,6 +98,9 @@ hr {
 .info-details {
     padding: 10px 10px;
     background-color: #fafafa;
+}
+.info-social {
+    margin-bottom: 20px;
 }
 .footer {
     margin-top: 40px;
