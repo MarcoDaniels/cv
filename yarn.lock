@@ -2167,13 +2167,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-fetch@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-2.2.1.tgz#96c859104d75defc967fb5db62474e75426b02b0"
-  dependencies:
-    node-fetch "2.1.2"
-    whatwg-fetch "2.0.4"
-
 cross-spawn@5.1.0, cross-spawn@^5.0.1:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -2599,10 +2592,6 @@ dotenv@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
 
-dotenv@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.0.0.tgz#24e37c041741c5f4b25324958ebbc34bca965935"
-
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -2949,7 +2938,7 @@ expect@^22.4.0:
     jest-message-util "^22.4.3"
     jest-regex-util "^22.4.3"
 
-express@^4.13.3, express@^4.16.2, express@^4.16.3:
+express@^4.13.3, express@^4.16.2:
   version "4.16.3"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.3.tgz#6af8a502350db3246ecc4becf6b5a34d22f7ed53"
   dependencies:
@@ -5411,10 +5400,6 @@ no-case@^2.2.0:
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
   dependencies:
     lower-case "^1.1.1"
-
-node-fetch@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.2.tgz#ab884e8e7e57e38a944753cec706f788d1768bb5"
 
 node-fetch@^1.0.1:
   version "1.7.3"
@@ -8243,7 +8228,7 @@ whatwg-fetch@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
 
-whatwg-fetch@2.0.4, whatwg-fetch@>=0.10.0:
+whatwg-fetch@>=0.10.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
 

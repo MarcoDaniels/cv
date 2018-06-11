@@ -3,9 +3,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": "src",
-    "outDir": "dist/src"
-  },
-  "exclude": [
-    "server/"
-  ]
+    "outDir": "build"
+  }
 }

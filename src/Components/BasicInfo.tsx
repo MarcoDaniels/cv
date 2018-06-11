@@ -13,7 +13,7 @@ const BasicInfo: React.SFC<BasicInfoProps> = props => {
 
     return (
         <div>
-            <img className="u-max-full-width" src={image ? image : ''}/>
+            <img className="u-max-full-width info-image" src={image ? image : ''}/>
             <div className="info">
                 <div>
                     <span className="info-icon"><FontAwesomeIcon icon={user}/></span>

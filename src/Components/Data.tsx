@@ -1,18 +1,18 @@
 import * as React from 'react'
 import { Query } from 'react-apollo'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import * as spinner from '@fortawesome/fontawesome-free-solid/faSpinner'
 import { loadDataQuery } from '../Query/types'
 import { loadData } from '../App.queries'
 import Experience from './Experience'
 import Education from './Education'
 import Projects from './Projects'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as spinner from '@fortawesome/fontawesome-free-solid/faSpinner'
 
 class GetData extends Query<loadDataQuery> {}
 
 const Data: React.SFC = () => {
     return (
-        <GetData query={loadData} ssr={false}>
+        <GetData query={loadData}>
             {({loading, data, error}) => {
                 if (error || !data) { return null }
 
