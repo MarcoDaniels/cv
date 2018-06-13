@@ -1,6 +1,5 @@
 import * as React from 'react'
 import BasicInfo from './BasicInfo'
-import SocialMedia from './SocialMedia'
 import Skills from './Skills'
 import Description from './Description'
 import { descriptionFragment, skillsFragment, socialMediaFragment, userInfoFragment } from '../Query/types'
@@ -20,9 +19,7 @@ const Content: React.SFC<ContentProps> = props => {
         <div className="container content">
             <div className="row">
                 <div className="four columns">
-                    <BasicInfo user={info}/>
-                    <hr/>
-                    <SocialMedia user={socialMedia}/>
+                    <BasicInfo user={info} socialMedia={socialMedia}/>
                 </div>
                 <div className="eight columns">
                     <Skills user={skills}/>

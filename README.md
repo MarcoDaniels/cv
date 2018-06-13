@@ -2,7 +2,7 @@
 
 > _Single Page React App for Marco Daniel Martins CV_
 
-## Tech
+## Technologies
 * TypeScript
 * React.js
 * GraphQL

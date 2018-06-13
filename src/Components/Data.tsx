@@ -20,11 +20,7 @@ const Data: React.SFC = () => {
                     return (
                         <div className="section section-big">
                             <span className="loading">
-                                <FontAwesomeIcon
-                                    icon={spinner}
-                                    size={'4x'}
-                                    pulse={true}
-                                />
+                                <FontAwesomeIcon icon={spinner} size={'4x'} spin={true}/>
                             </span>
                         </div>
                     )

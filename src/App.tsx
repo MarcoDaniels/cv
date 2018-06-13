@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Query } from 'react-apollo'
 import { config } from '@fortawesome/fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as spinner from '@fortawesome/fontawesome-free-solid/faSpinner'
+import * as spinner from '@fortawesome/fontawesome-free-solid/faBarcode'
 import { loadAppQuery } from './Query/types'
 import { loadApp } from './App.queries'
 import Header from './Components/Header'
@@ -22,13 +22,8 @@ const App: React.SFC = () => {
                 if (loading) {
                     return (
                         <div className="section section-big">
-                            <span className="loading">
-                                <FontAwesomeIcon
-                                    icon={spinner}
-                                    size={'4x'}
-                                    pulse={true}
-                                />
-                            </span>
+                            <FontAwesomeIcon icon={spinner} size={'6x'}/>
+                            <h1>scanning curriculum vitae</h1>
                         </div>
                     )
                 }
