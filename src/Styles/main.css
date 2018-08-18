@@ -155,9 +155,3 @@ hr {
     from { opacity:1; }
     to { opacity:0; }
 }
-
-
-
-.render {
-    font-size: 11px;
-}

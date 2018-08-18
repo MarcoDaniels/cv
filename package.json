@@ -6,7 +6,7 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "start": "react-scripts-ts start",
+    "start": "PORT=3001 react-scripts-ts start",
     "test": "react-scripts-ts test --env=jsdom",
     "build": "react-scripts-ts build",
     "serve": "yarn build && firebase serve --only hosting"
